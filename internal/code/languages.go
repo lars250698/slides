@@ -31,6 +31,7 @@ const (
 	Rust       = "rust"
 	Java       = "java"
 	Julia      = "julia"
+	C          = "c"
 	Cpp        = "cpp"
 	Swift      = "swift"
 	Dart       = "dart"
@@ -106,6 +107,13 @@ var Languages = map[string]Language{
 	Julia: {
 		Extension: "jl",
 		Commands:  cmds{{"julia", "<file>"}},
+	},
+	C: {
+		Extension: "c",
+		Commands: cmds{
+			{"gcc", "-o", "<path>/<name>.run", "<file>"},
+			{"<path>/<name>.run"},
+		},
 	},
 	Cpp: {
 		Extension: "cpp",
