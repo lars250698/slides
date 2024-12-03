@@ -38,6 +38,8 @@ const (
 	V          = "v"
 	Scala      = "scala"
 	Haskell    = "haskell"
+	CSharp     = "csharp"
+	Kotlin     = "kotlin"
 )
 
 // Languages is a map of supported languages with their extensions and commands
@@ -141,5 +143,13 @@ var Languages = map[string]Language{
 	Haskell: {
 		Extension: "hs",
 		Commands:  cmds{{"runghc", "<file>"}},
+	},
+	CSharp: {
+		Extension: "csx",
+		Commands:  cmds{{"dotnet", "script", "<file>"}},
+	},
+	Kotlin: {
+		Extension: "kts",
+		Commands:  cmds{{"kotlin", "<file>"}},
 	},
 }
